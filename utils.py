@@ -2,6 +2,8 @@ FILE_CSV = 'Phonebook.csv'
 
 
 def input_data():
+    """ Функция ввода/обновления данных в телефонном справочнике.
+    """
     data = []
     flag = False
     last_name = input('Введите Фамилию: ')
@@ -31,7 +33,7 @@ def input_data():
 
 
 def read_book():
-    """ Чтение телефонного справочника
+    """ Чтение телефонного справочника.
     """
     with open(FILE_CSV, 'r', encoding='utf-8') as file:
         lines = file.readlines()
@@ -39,7 +41,7 @@ def read_book():
 
 
 def write_book():
-    """ Запись данных в телефонный справочник
+    """ Запись данных в телефонный справочник.
     """
     data = input_data()
 
@@ -48,7 +50,7 @@ def write_book():
 
 
 def search_in_book():
-    """ Поиск записей в телефонном справочнике
+    """ Поиск записей в телефонном справочнике.
     """
     search = input('Введите поисковый запрос (Иван Иванов или Иван Телепузики, например :) )\n').lower().split()
     number = 0
@@ -64,7 +66,7 @@ def search_in_book():
 
 
 def record_change():
-    """ Внесение изменений в запись справочника
+    """ Внесение изменений в запись справочника.
     """
     search_in_book()
     record = int(input('Введите строку для редактирования '))
